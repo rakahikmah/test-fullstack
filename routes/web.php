@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,7 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
     return redirect('/login');
 });
-
-
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/category', CategoryController::class);
+Route::resource('/product', ProductController::class);

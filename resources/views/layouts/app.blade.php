@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Test Fullstack Developer
+                    Test Fullstack Developer Majoo Teknologi Indonesia
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -56,8 +56,8 @@
                                         Kategori
                                     </a>
 
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
-                                        Product
+                                    <a class="dropdown-item" href="{{ route('product.create') }}">
+                                        Tambah Product
                                     </a>
                                   
                                 </div>
