@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $product = Product::select('products.name_product','products.description','products.price','products.image_name','categories.name')
+                    ->join('categories','categories.id','=','products.category_id')
+                    ->paginate(4);
+    
+        return view('home',compact('product'));
     }
 }
